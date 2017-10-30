@@ -32,7 +32,7 @@ export function fetchedOnTonight(shows) {
 export function fetchShows(id) {
   return function(dispatch) {
     dispatch(fetchingShows())
-    fetch(`http://localhost:3000/${userId}/shows`, {
+    fetch(`https://my-lineup-backend.herokuapp.com/${userId}/shows`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export function removeShow(id) {
   return function (dispatch) {
     const body = JSON.stringify(id)
     dispatch(fetchingShows())
-    return fetch(`http://localhost:3000/${userId}/user_shows`, {
+    return fetch(`https://my-lineup-backend.herokuapp.com/${userId}/user_shows`, {
         method: "DELETE",
         headers: {
           'Accept': 'application/json',
@@ -70,7 +70,7 @@ export function addSuggestedShow(id) {
   return function (dispatch) {
     dispatch(fetchingShows())
     const body = JSON.stringify(id)
-    return fetch("http://localhost:3000/suggested", {
+    return fetch("https://my-lineup-backend.herokuapp.com/suggested", {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -90,7 +90,7 @@ export function fetchPremieres() {
   return function (dispatch) {
     let d = moment(new Date()).startOf('week').format("YYYY-MM-DD")
     const body = JSON.stringify({date: d})
-    return fetch("http://localhost:3000/premieres", {
+    return fetch("https://my-lineup-backend.herokuapp.com/premieres", {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -110,7 +110,7 @@ export function addShow(show) {
   return function (dispatch) {
     dispatch(fetchingShows())
     const body = JSON.stringify(show)
-    return fetch("http://localhost:3000/shows", {
+    return fetch("https://my-lineup-backend.herokuapp.com/shows", {
         method: "POST",
         headers: {
           'Accept': 'application/json',

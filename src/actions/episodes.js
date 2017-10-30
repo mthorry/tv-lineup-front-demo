@@ -26,7 +26,7 @@ export function fetchedShowEpisodes(episodes) {
 export function addEpisode(episode) {
   return function (dispatch) {
     dispatch(fetchingEpisodes())
-    return fetch("http://localhost:3000/episodes", {
+    return fetch("https://my-lineup-backend.herokuapp.com/episodes", {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -46,7 +46,7 @@ export function removeEpisode(id) {
   return function (dispatch) {
     dispatch(fetchingEpisodes())
     const body = id
-    return fetch(`http://localhost:3000/${userId}/user_episodes`, {
+    return fetch(`https://my-lineup-backend.herokuapp.com/${userId}/user_episodes`, {
         method: "DELETE",
         headers: {
           'Accept': 'application/json',
@@ -65,7 +65,7 @@ export function removeEpisode(id) {
 export function fetchMyLineup(id) {
   return function(dispatch) {
     dispatch(fetchingEpisodes())
-    fetch(`http://localhost:3000/${userId}/episodes`, {
+    fetch(`https://my-lineup-backend.herokuapp.com/${userId}/episodes`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
