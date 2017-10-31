@@ -5,8 +5,9 @@ import { Dropdown, Menu } from 'semantic-ui-react'
 class Nav extends React.Component{
 
   handleLogout = () => {
-    localStorage.removeItem("jwtToken")
-    localStorage.removeItem("id")
+    // localStorage.removeItem("jwtToken")
+    // localStorage.removeItem("id")
+    window.alert("No logout in Demo")
   }
 
   render(){
@@ -16,7 +17,7 @@ class Nav extends React.Component{
         <Menu.Item>
           <img src="http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/television.png" alt="📺"/>
         </Menu.Item>
-        { localStorage.getItem('jwtToken') ? <div className="right menu">
+        <div className="right menu">
             <NavLink className="item" to="/search"> Search </NavLink>
             <NavLink className="item" to="/dash"> Dashboard </NavLink>
             <NavLink className="item" to="/shows"> My Shows </NavLink>
@@ -28,8 +29,8 @@ class Nav extends React.Component{
                 <NavLink className="item" to="/watching"> Most Watched </NavLink>
               </Dropdown.Menu>
             </Dropdown>
-            <NavLink className="item" to="/login" onClick={this.handleLogout}> Logout </NavLink>
-          </div> : <div className="right menu"><NavLink className="item" to="/login"> Login </NavLink><NavLink className="item" to="/signup"> Signup </NavLink></div> }
+            <NavLink className="item" onClick={this.handleLogout}> Logout </NavLink>
+          </div>
       </Menu>
       </div>
     )

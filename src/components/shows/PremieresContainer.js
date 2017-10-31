@@ -11,7 +11,7 @@ class PremieresContainer extends React.Component {
   state = { open: false }
 
   componentDidMount() {
-    const userId = localStorage.getItem("id")
+    const userId = 1
     this.props.myLineup.length > 0 ? null : this.props.fetchMyLineup(userId)
     this.props.premieres.length > 0 ? null : this.props.fetchPremieres()
   }

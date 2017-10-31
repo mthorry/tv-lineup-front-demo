@@ -7,8 +7,6 @@ import ShowContainer from './components/shows/ShowContainer'
 import TrendingContainer from './components/extras/TrendingContainer'
 import MostWatchedContainer from './components/extras/MostWatchedContainer'
 import DashboardContainer from './components/extras/DashboardContainer'
-import Login from './components/users/login'
-import Signup from './components/users/signup'
 import Nav from './components/Nav'
 import { Route } from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
@@ -19,8 +17,6 @@ class App extends Component {
       <div className="App">
       <Container text/>
         <Route path="/" component={Nav}/>
-        <Route path="/login" component={Login}/>
-        <Route path="/signup" component={Signup}/>
         <Route path="/search" render={(props) => <SearchContainer {...props} /> } />
         <Route path="/shows" render={(props) => <ShowContainer {...props} /> } />
         <Route path="/premieres" render={(props) => <PremieresContainer {...props} /> } />

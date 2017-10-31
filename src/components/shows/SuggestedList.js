@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { formatTime } from '../../services/formatting'
 import { addSuggestedShow } from '../../actions/shows'
 import { Card, Button, Loader, Transition } from 'semantic-ui-react'
+import baseURL from '../../services/url'
 
 // EPISODE CONTAINER = PARENT
 
@@ -17,9 +18,9 @@ class SuggestedList extends React.Component {
   }
 
   componentDidMount = () => {
-    let token = localStorage.getItem("jwtToken")
+    let token = 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ'
     let body = JSON.stringify(this.props.show)
-    return fetch("https://my-lineup-backend.herokuapp.com/recommend", {
+    return fetch(`${baseURL}/recommend`, {
       method: "POST",
       headers: {
         'Accept': 'application/json',

@@ -24,7 +24,7 @@ export function clearResults() {
 export function searchShows(search) {
   return function (dispatch) {
     dispatch(fetchingResults())
-    const token = localStorage.getItem("jwtToken")
+    const token = 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ'
     const body = JSON.stringify({search: search})
     return fetch(`${baseURL}/search`, {
         method: "POST",

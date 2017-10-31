@@ -9,7 +9,7 @@ import { Divider, Loader } from 'semantic-ui-react'
 class DashboardContainer extends React.Component {
 
   componentDidMount() {
-    const userId = localStorage.getItem("id")
+    const userId = 1
     this.props.myLineup.length > 0 ? null : this.props.fetchMyLineup(userId)
     this.props.onTonight.length > 0 ? null : this.props.fetchOnTonight()
   }

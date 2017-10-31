@@ -15,7 +15,7 @@ class ShowCalendar extends React.Component {
   state = { open: false }
 
   componentDidMount() {
-    const userId = localStorage.getItem("id")
+    const userId = 1
     this.props.fetchMyLineup(userId)
     this.props.fetchOnTonight()
   }

@@ -12,7 +12,7 @@ import EpisodeContainer from '../episodes/EpisodeContainer'
 class ShowContainer extends React.Component {
 
   componentDidMount() {
-    const userId = localStorage.getItem("id")
+    const userId = 1
     this.props.myShows.length > 0 ? null : this.props.fetchShows(userId)
     this.props.myLineup.length > 0 ? null : this.props.fetchMyLineup(userId)
     this.props.ratings.length > 0 ? null : this.props.fetchUserShows()

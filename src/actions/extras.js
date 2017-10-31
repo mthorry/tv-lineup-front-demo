@@ -1,7 +1,7 @@
 import moment from 'moment'
 import baseURL from '../services/url'
-const token = localStorage.getItem("jwtToken")
-const userId = localStorage.getItem("id")
+const token = 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Jyd2FCw1ZqUY8_U6twONMGkWuQsQBsPo002ofynEyrQ'
+const userId = 1
 
 function fetchingTrendingShows() {
   return {
