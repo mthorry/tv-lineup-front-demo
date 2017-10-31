@@ -47,7 +47,7 @@ export function removeEpisode(id) {
   return function (dispatch) {
     dispatch(fetchingEpisodes())
     const body = id
-    return fetch(`${baseURL}/${id}/user_episodes`, {
+    return fetch(`${baseURL}/${userId}/user_episodes`, {
         method: "DELETE",
         headers: {
           'Accept': 'application/json',
