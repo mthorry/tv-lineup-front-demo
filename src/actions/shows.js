@@ -130,7 +130,7 @@ export function addShow(show) {
 export function fetchOnTonight() {
   return function(dispatch) {
     dispatch(fetchingShows())
-    fetch("http://api.tvmaze.com/schedule")
+    fetch("https://api.tvmaze.com/schedule")
       .then(res => res.json())
       .then(json => json.reverse())
         .then(json => {
