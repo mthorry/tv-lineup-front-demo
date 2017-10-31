@@ -1,4 +1,5 @@
 import moment from 'moment';
+import baseURL from '../services/url'
 const token = localStorage.getItem("jwtToken")
 const userId = localStorage.getItem("id")
 
@@ -32,7 +33,7 @@ export function fetchedOnTonight(shows) {
 export function fetchShows(id) {
   return function(dispatch) {
     dispatch(fetchingShows())
-    fetch(`https://my-lineup-backend.herokuapp.com/${userId}/shows`, {
+    fetch(`${baseURL}/${userId}/shows`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -50,7 +51,7 @@ export function removeShow(id) {
   return function (dispatch) {
     const body = JSON.stringify(id)
     dispatch(fetchingShows())
-    return fetch(`https://my-lineup-backend.herokuapp.com/${userId}/user_shows`, {
+    return fetch(`${baseURL}/${userId}/user_shows`, {
         method: "DELETE",
         headers: {
           'Accept': 'application/json',
@@ -70,7 +71,7 @@ export function addSuggestedShow(id) {
   return function (dispatch) {
     dispatch(fetchingShows())
     const body = JSON.stringify(id)
-    return fetch("https://my-lineup-backend.herokuapp.com/suggested", {
+    return fetch(`${baseURL}/suggested`, {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -90,7 +91,7 @@ export function fetchPremieres() {
   return function (dispatch) {
     let d = moment(new Date()).startOf('week').format("YYYY-MM-DD")
     const body = JSON.stringify({date: d})
-    return fetch("https://my-lineup-backend.herokuapp.com/premieres", {
+    return fetch(`${baseURL}/premieres`, {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -110,7 +111,7 @@ export function addShow(show) {
   return function (dispatch) {
     dispatch(fetchingShows())
     const body = JSON.stringify(show)
-    return fetch("https://my-lineup-backend.herokuapp.com/shows", {
+    return fetch(`${baseURL}/shows`, {
         method: "POST",
         headers: {
           'Accept': 'application/json',

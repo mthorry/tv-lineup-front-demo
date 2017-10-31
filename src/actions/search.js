@@ -1,3 +1,4 @@
+import baseURL from '../services/url'
 
 export function fetchingResults() {
   return {
@@ -25,7 +26,7 @@ export function searchShows(search) {
     dispatch(fetchingResults())
     const token = localStorage.getItem("jwtToken")
     const body = JSON.stringify({search: search})
-    return fetch("https://my-lineup-backend.herokuapp.com/search", {
+    return fetch(`${baseURL}/search`, {
         method: "POST",
         headers: {
           'Accept': 'application/json',
