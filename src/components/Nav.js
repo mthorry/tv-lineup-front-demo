@@ -29,7 +29,6 @@ class Nav extends React.Component{
                 <NavLink className="item" to="/watching"> Most Watched </NavLink>
               </Dropdown.Menu>
             </Dropdown>
-            <NavLink className="item" onClick={this.handleLogout}> Logout </NavLink>
           </div>
       </Menu>
       </div>
