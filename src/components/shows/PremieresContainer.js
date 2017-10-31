@@ -64,6 +64,7 @@ class PremieresContainer extends React.Component {
       <div>
         <br/>
         <Divider horizontal ><h1>Premieres This Week</h1></Divider>
+        <p><em>'🌟 NEW' means it is a series premiere. All others are season premieres</em></p>
           <Transition animation='fade' duration={800} transitionOnMount={true}>
           <BigCalendar
             popup

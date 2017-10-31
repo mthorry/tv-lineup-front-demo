@@ -15,8 +15,8 @@ class EpisodeList extends React.Component {
   }
 
   paginate = () => {
-    let begin = (this.state.currentPageNo - 1) * 5
-    let end = begin + 5
+    let begin = (this.state.currentPageNo - 1) * 4
+    let end = begin + 4
     let displayed = this.props.showEpisodes.slice(begin, end)
     this.setState({
       displayedItems: displayed
@@ -49,7 +49,7 @@ class EpisodeList extends React.Component {
         </Card.Group>
         <br/>
         <div>
-        { this.state.displayedItems.length < 5 ? null : <Button floated='left' basic color='grey' onClick={this.handleNext}><Icon name='left arrow'/> Older </Button> }
+        { this.state.displayedItems.length < 4 ? null : <Button floated='left' basic color='grey' onClick={this.handleNext}><Icon name='left arrow'/> Older </Button> }
         { this.state.currentPageNo === 1 ? null : <Button floated='right' basic color='grey' onClick={this.handlePrevious} > Newer <Icon name='right arrow'/></Button> }
         <br/>
         </div>

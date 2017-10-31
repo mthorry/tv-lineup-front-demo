@@ -17,8 +17,8 @@ class DashboardOnTonightList extends React.Component {
 
   paginate = () => {
     let ids = this.props.myLineup.map(show => show.id)
-    let begin = (this.state.currentPageNo - 1) * 5
-    let end = begin + 5
+    let begin = (this.state.currentPageNo - 1) * 4
+    let end = begin + 4
     let eps = this.props.onTonight.filter(episode => episode.show.rating.average > 8 && !ids.includes(episode.id))
     let displayed = eps.slice(begin, end)
     this.setState({
@@ -53,7 +53,7 @@ class DashboardOnTonightList extends React.Component {
         </Card.Group>
         <br/>
         <div>
-        { this.state.displayedItems.length < 5 ? null : <Button floated='right' basic color='grey' onClick={this.handleNext}> More <Icon name='right arrow'/></Button> }
+        { this.state.displayedItems.length < 4 ? null : <Button floated='right' basic color='grey' onClick={this.handleNext}> More <Icon name='right arrow'/></Button> }
         { this.state.currentPageNo === 1 ? null : <Button floated='left' basic color='grey' onClick={this.handlePrevious} ><Icon name='left arrow'/> Back </Button> }
         <br/>
         </div>
