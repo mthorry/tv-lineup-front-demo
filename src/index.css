@@ -7,7 +7,7 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 50px;
-  font-family: 'Merriweather';
+  font-family: 'Merriweather', 'Cambria', serif;
   font-size: 16px;
   background-image: url('./photography.png');
   min-height: 1000px;

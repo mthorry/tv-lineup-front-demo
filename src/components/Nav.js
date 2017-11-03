@@ -3,13 +3,6 @@ import { NavLink } from 'react-router-dom'
 import { Dropdown, Menu } from 'semantic-ui-react'
 
 class Nav extends React.Component{
-
-  handleLogout = () => {
-    // localStorage.removeItem("jwtToken")
-    // localStorage.removeItem("id")
-    window.alert("No logout in Demo")
-  }
-
   render(){
     return(
       <div className="navbar">

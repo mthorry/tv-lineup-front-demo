@@ -8,6 +8,7 @@ import TrendingContainer from './components/extras/TrendingContainer'
 import MostWatchedContainer from './components/extras/MostWatchedContainer'
 import DashboardContainer from './components/extras/DashboardContainer'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 import { Route } from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 
