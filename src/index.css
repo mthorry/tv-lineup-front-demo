@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .App {
@@ -10,12 +11,41 @@ body {
   font-family: 'Merriweather', 'Cambria', serif;
   font-size: 16px;
   background-image: url('./photography.png');
-  min-height: 1000px;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 200px;
 /*  background: #A1FFCE;
   background: -webkit-linear-gradient(to top, #A1FFCE, #fff);
   background: linear-gradient(to top, #A1FFCE, #fff);*/
 }
 
+@media screen and (max-width: 600px) {
+  .App {
+    padding-bottom: 500px;
+  }
+}
+
 .navbar {
   background-color: white;
+  width: 100%;
+}
+
+.Footer {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0 ;
+  right: 0;
+  width: 100%;
+  background: #1b1c1d;
+  color: white;
+}
+
+.footer-column {
+  padding: 10px;
+  width: 400px;
+  text-align: center;
 }

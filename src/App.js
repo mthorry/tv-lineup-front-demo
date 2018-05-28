@@ -25,6 +25,7 @@ class App extends Component {
         <Route exact path='/trending' component={TrendingContainer} />
         <Route exact path='/watching' component={MostWatchedContainer} />
         <Route exact path='/dash' component={DashboardContainer} />
+        <Route path="/" component={Footer}/>
       <Container/>
       </div>
     );
