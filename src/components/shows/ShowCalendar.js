@@ -92,6 +92,14 @@ class ShowCalendar extends React.Component {
         }
       })
 
+      let style = {
+        border: 0,
+        width: "92vw",
+        height: "75vh",
+        frameborder: "0",
+        scrolling: "no"
+      }
+
     return(
       <div>
         <br/>
