@@ -91,7 +91,7 @@ class PremieresContainer extends React.Component {
             <p>{ episode !== undefined ? `Summary: ${episode.summary !== null ? episode.summary : `No Summary Available 😕`}` : `No Summary Available` }</p>
           </Modal.Content>
           <Modal.Actions>
-           <Button negative icon='remove' labelPosition='right' onClick={this.close} content='Close'/>
+           <Button icon='remove' labelPosition='right' onClick={this.close} content='Close'/>
             <Button positive icon='checkmark' labelPosition='right' content='Add Show' episode={episode} onClick={this.handleAdd}/>
           </Modal.Actions>
         </Modal>

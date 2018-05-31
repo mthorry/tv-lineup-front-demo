@@ -148,7 +148,7 @@ class ShowCalendar extends React.Component {
           <Modal.Actions>
            { episode !== undefined ? ( !ids.includes(episode.id) ? <Button icon='remove' labelPosition='right' onClick={this.close} content='Close'/> : <Button negative onClick={this.handleRemove} labelPosition='right' episode={episode} content='Remove from Lineup'/> ) : null}
 
-           { episode !== undefined ? ( !ids.includes(episode.id) ? <Button positive icon='checkmark' labelPosition='right' content='Add Show' episode={episode} onClick={this.handleAdd}/> : <Button negative icon='remove' labelPosition='right' onClick={this.handleRemove} episode={episode} content='Remove from Lineup'/> ) : null }
+           { episode !== undefined ? ( !ids.includes(episode.id) ? <Button positive icon='checkmark' labelPosition='right' content='Add Show' episode={episode} onClick={this.handleAdd}/> : <div><Button icon='remove' labelPosition='right' onClick={this.close} content='Close'/><Button negative icon='remove' labelPosition='right' onClick={this.handleRemove} episode={episode} content='Remove from Lineup'/></div> ) : null }
 
           </Modal.Actions>
         </Modal>
