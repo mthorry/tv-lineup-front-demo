@@ -62,7 +62,8 @@ class PremieresContainer extends React.Component {
 
       const modalStyle = {
           marginTop: '0px !important',
-          marginLeft: 'auto'
+          marginLeft: 'auto',
+          marginRight: 'auto'
       }
 
     return(
