@@ -100,6 +100,11 @@ class ShowCalendar extends React.Component {
         scrolling: "no"
       }
 
+      const modalStyle = {
+          marginTop: '0px !important',
+          marginLeft: 'auto'
+      }
+
     return(
       <div>
         <br/>
@@ -137,7 +142,7 @@ class ShowCalendar extends React.Component {
           max={moment('11:30pm', 'h:mma').toDate()}/>
         </Transition>
 
-        <Modal size='tiny' episode={episode} open={open} onClose={this.close}>
+        <Modal size='tiny' episode={episode} open={open} onClose={this.close} style={modalStyle}>
           <Modal.Header>
             { episode !== undefined ? episode.title : null}
           </Modal.Header>

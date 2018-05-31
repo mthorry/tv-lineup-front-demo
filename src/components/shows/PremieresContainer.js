@@ -60,6 +60,11 @@ class PremieresContainer extends React.Component {
         }}
       })
 
+      const modalStyle = {
+          marginTop: '0px !important',
+          marginLeft: 'auto'
+      }
+
     return(
       <div>
         <br/>
@@ -82,7 +87,7 @@ class PremieresContainer extends React.Component {
           </Transition>
         <br/>
 
-        <Modal size='tiny' episode={episode} open={open} onClose={this.close}>
+        <Modal size='tiny' episode={episode} open={open} onClose={this.close} style={modalStyle}>
           <Modal.Header>
             { episode !== undefined ? episode.title : null}
           </Modal.Header>
