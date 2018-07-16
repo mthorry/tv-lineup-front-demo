@@ -45,7 +45,7 @@ class SuggestedList extends React.Component {
       <Card centered={true}>
       <Card.Content>
         <h3>{show.title}</h3>
-        { show.status !== 'ended' ? <h5>Airs: {show.airs.day} {formatTime(show.airs.time)} on {show.network}</h5> : <h5>{(show.status).toUpperCase()}</h5> }
+        { show.status !== 'ended' ? <h5>Airs: {show.airs.day} {show.airs.time ? formatTime(show.airs.time) : 'Unavailable'} on {show.network}</h5> : <h5>{(show.status).toUpperCase()}</h5> }
         <Card.Description>Summary: {show.overview ? show.overview.substring(0,250) + `...` : `Not Available`} </Card.Description>
       </Card.Content>
       <Card.Content>
