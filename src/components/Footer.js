@@ -8,7 +8,7 @@ class Footer extends React.Component{
     <div className="Footer">
       <div className="footer-column">
         <h3 >My Lineup App</h3>
-        <p>Made with ❤️ by <strong>Matthew Thorry</strong>, 2017 with Redux, React and Ruby on Rails</p>
+        <p>Made with ❤️ by <strong>Matthew Thorry</strong>, 2018 with Redux, React and Ruby on Rails</p>
       </div>
       <div className="footer-column">
         <h3>GitHub Repos</h3>
@@ -20,7 +20,7 @@ class Footer extends React.Component{
       </div>
       <div className="footer-column">
         <h3>Want More?</h3>
-        <p>Checkout my blog on <a href="https://www.medium.com/@mthorry" target="_blank">Medium</a> or see some of my professional accomplisments on <a href="https://www.linkedin.com/in/mthorry" target="_blank">LinkedIn</a>.</p>
+        <p>See some of my professional accomplisments on <a href="https://www.linkedin.com/in/mthorry" target="_blank">LinkedIn</a>.</p>
         <p>💌 Shoot me an <a href="mailto:mthorry@gmail.com?Subject=Nice%20app!" target="_top">email</a></p>
       </div>
     </div>
